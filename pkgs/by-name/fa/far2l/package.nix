@@ -43,13 +43,13 @@
 
 stdenv.mkDerivation rec {
   pname = "far2l";
-  version = "2.6.3";
+  version = "2.6.5";
 
   src = fetchFromGitHub {
     owner = "elfmz";
     repo = "far2l";
     rev = "v_${version}";
-    sha256 = "sha256-iWZQpLe+shdepCVOHZDp7QEQoqelbHGRJh09KWb6aD0=";
+    sha256 = "0bpj6j1rqziaa5ahqfbkiq04vc17sf31ikj4ki3zkkvxxpl3gybb";
   };
 
   nativeBuildInputs = [
@@ -59,6 +59,7 @@ stdenv.mkDerivation rec {
     m4
     perl
     makeWrapper
+    libxml2
   ];
 
   buildInputs =
